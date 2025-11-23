@@ -1,0 +1,83 @@
+<div class="content-section">
+    <h2 class="section-title">
+        <i class="fas fa-search" style="margin-right: 10px; color: #667eea;"></i>
+        Pencarian Buku
+    </h2>
+    
+    <!-- Search Form -->
+    <div class="search-form" style="background: #f8f9ff; padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+        <form id="searchForm">
+            <div class="form-row" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 15px; align-items: end;">
+                <input type="text" id="searchQuery" placeholder="Masukkan judul atau kata kunci buku..." style="padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+                <select id="categoryFilter" style="padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                    <option value="">Semua Kategori</option>
+                    <option value="teknik">Teknik</option>
+                    <option value="sastra">Sastra</option>
+                    <option value="sains">Sains</option>
+                    <option value="bisnis">Bisnis</option>
+                </select>
+                <button type="submit" class="action-btn" style="width: 100%; justify-self: end;">
+                    <i class="fas fa-search"></i> Cari Buku
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Search Results -->
+    <div id="searchResults">
+        <p style="text-align: center; color: #666; font-style: italic;">Masukkan kata kunci di atas untuk mencari buku. Contoh hasil pencarian:</p>
+        
+        <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="stat-card" style="text-align: left;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="https://via.placeholder.com/60x80/667eea/ffffff?text=Buku" alt="Cover Buku" style="border-radius: 8px; margin-right: 15px;">
+                    <div>
+                        <h3 style="margin: 0; color: #333;">Algoritma dan Struktur Data</h3>
+                        <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oleh: Donald Knuth</p>
+                    </div>
+                </div>
+                <p style="color: #555; line-height: 1.5;">Buku klasik tentang algoritma pemrograman. Tersedia: 5 eksemplar.</p>
+                <button class="action-btn" style="margin-top: 10px; padding: 8px 15px; font-size: 14px;">
+                    <i class="fas fa-bookmark"></i> Pinjam Buku
+                </button>
+            </div>
+            
+            <div class="stat-card" style="text-align: left;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="https://via.placeholder.com/60x80/4ecdc4/ffffff?text=Buku" alt="Cover Buku" style="border-radius: 8px; margin-right: 15px;">
+                    <div>
+                        <h3 style="margin: 0; color: #333;">Machine Learning untuk Pemula</h3>
+                        <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oleh: Andrew Ng</p>
+                    </div>
+                </div>
+                <p style="color: #555; line-height: 1.5;">Panduan lengkap machine learning dengan contoh praktis. Tersedia: 3 eksemplar.</p>
+                <button class="action-btn" style="margin-top: 10px; padding: 8px 15px; font-size: 14px;">
+                    <i class="fas fa-bookmark"></i> Pinjam Buku
+                </button>
+            </div>
+            
+            <div class="stat-card" style="text-align: left;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="https://via.placeholder.com/60x80/45b7d1/ffffff?text=Buku" alt="Cover Buku" style="border-radius: 8px; margin-right: 15px;">
+                    <div>
+                        <h3 style="margin: 0; color: #333;">Sejarah Peradaban</h3>
+                        <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oleh: Will Durant</p>
+                    </div>
+                </div>
+                <p style="color: #555; line-height: 1.5;">Sejarah lengkap peradaban dunia dari zaman kuno. Tersedia: 8 eksemplar.</p>
+                <button class="action-btn" style="margin-top: 10px; padding: 8px 15px; font-size: 14px;">
+                    <i class="fas fa-bookmark"></i> Pinjam Buku
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Contoh JS sederhana untuk form search (bisa dikembangkan)
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = document.getElementById('searchQuery').value;
+        alert(`Mencari buku dengan kata kunci: "${query}"`); // Ganti dengan AJAX real
+    });
+</script>
